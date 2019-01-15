@@ -8,11 +8,11 @@ def open_hpo():
     url = 'https://raw.githubusercontent.com/obophenotype/human-phenotype-ontology/master/hp.obo'
     graph = obonet.read_obo(url)
     # Number of nodes
-    print("Number of nodes: %s", len(graph))
+    print("Number of nodes: %s" %(len(graph)))
     # Number of edges
-    print("Number of edges %s", graph.number_of_edges())
+    print("Number of edges %s" %(graph.number_of_edges()))
     # Check if the ontology is a DAG
-    print("Is q DAG: %s", networkx.is_directed_acyclic_graph(graph))
+    print("Is a DAG: %s" %(networkx.is_directed_acyclic_graph(graph)))
     return graph
 
 
